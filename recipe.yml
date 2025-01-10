@@ -34,7 +34,6 @@ stages:
   - name: modules
     type: includes
     includes:
-      - modules/051-steam.yml
       - modules/050-firefox.yml
 
   # Put your custom actions above this comment
