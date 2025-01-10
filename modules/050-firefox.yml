@@ -2,5 +2,4 @@ name: firefox
 type: shell
 commands:
   - apt-get update
-  - apt-get install firefox
-  
+  - apt-get install -y firefox
