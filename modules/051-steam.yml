@@ -1,0 +1,6 @@
+name: steam
+type: shell
+commands:
+- wget https://cdn.fastly.steamstatic.com/client/installer/steam.deb
+- apt-get install ./steam.deb
+- rm steam.deb
