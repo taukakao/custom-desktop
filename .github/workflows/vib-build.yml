@@ -67,6 +67,12 @@ jobs:
           echo New digest is: $(cat digest.txt)
           echo "HAS_UPDATES=$(cmp -s digest.txt last_digest.txt; echo $?)" >> "$GITHUB_ENV"
 
+      - name: Get age of current image
+        run: |
+          TIME_NOW=$(date '+%s')
+          TIME_IMAGE_CREATED=$(date --date=$(skopeo inspect docker://ghcr.io/taukakao/custom-desktop:main | jq -r '.Created') '+%s')
+          echo "IMAGE_AGE_SECONDS=$(($TIME_NOW - $TIME_IMAGE_CREATED))" >> "$GITHUB_ENV"
+
       - name: Upload current digest
         uses: actions/upload-artifact@v4
         with:
@@ -81,6 +87,10 @@ jobs:
             echo action was manually run, updating either way
             echo "has_updates=true" >> "$GITHUB_OUTPUT"
           elif [ ${{ env.HAS_UPDATES }} == 1 ]
+          then
+            echo base image was updated since the last build
+            echo "has_updates=true" >> "$GITHUB_OUTPUT"
+          elif [ "${{ env.IMAGE_AGE_SECONDS }}" -gt "604800" ]
           then
             echo base image was updated since the last build
             echo "has_updates=true" >> "$GITHUB_OUTPUT"
