@@ -92,7 +92,7 @@ jobs:
             echo "has_updates=true" >> "$GITHUB_OUTPUT"
           elif [ "${{ env.IMAGE_AGE_SECONDS }}" -gt "604800" ]
           then
-            echo base image was updated since the last build
+            echo image is older than 7 days, updating
             echo "has_updates=true" >> "$GITHUB_OUTPUT"
           else
             echo no updates to the base image since the last build
