@@ -34,7 +34,7 @@ stages:
   - name: replace-kernel
     type: shell
     commands:
-    - apt-get install -y linux-image-6.12.9-amd64 linux-image-6.12.12-amd64-
+    - apt-get install -y linux-image-6.12.9-amd64 linux-image-amd64- linux-image-6.12.12-amd64-
 
   - name: modules
     type: includes
