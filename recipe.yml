@@ -31,6 +31,11 @@ stages:
       - distrobox
       - sudo
 
+  - name: replace-kernel
+    type: shell
+    commands:
+    - apt-get install -y linux-image-6.12.9-amd64 linux-image-6.12.12-amd64-
+
   - name: modules
     type: includes
     includes:
