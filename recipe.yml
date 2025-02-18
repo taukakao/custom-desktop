@@ -39,7 +39,7 @@ stages:
   - name: install-gnome48
     type: shell
     commands:
-    - apt-get install -y -t gnome-session gnome-shell gnome-shell-extensions dbus-x11 evolution-data-server geoclue-2.0 gjs mutter xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk gnome-user-docs adwaita-icon-theme gnome-accessibility-themes gnome-backgrounds gnome-themes-extra nautilus nautilus-share python3-nautilus gnome-bluetooth-sendto gnome-color-manager gnome-menus gnome-online-accounts network-manager-gnome network-manager-fortisslvpn-gnome network-manager-l2tp-gnome network-manager-openconnect-gnome gnome-keyring gnome-disk-utility gnome-system-monitor gnome-sushi gnome-software libpam-gnome-keyring
+    - apt-get install -y -t experimental gnome-session gnome-shell gnome-shell-extensions dbus-x11 evolution-data-server geoclue-2.0 gjs mutter xdg-desktop-portal xdg-desktop-portal-gnome xdg-desktop-portal-gtk gnome-user-docs adwaita-icon-theme gnome-accessibility-themes gnome-backgrounds gnome-themes-extra nautilus nautilus-share python3-nautilus gnome-bluetooth-sendto gnome-color-manager gnome-menus gnome-online-accounts network-manager-gnome network-manager-fortisslvpn-gnome network-manager-l2tp-gnome network-manager-openconnect-gnome gnome-keyring gnome-disk-utility gnome-system-monitor gnome-sushi gnome-software libpam-gnome-keyring
 
   # Put your custom actions above this comment
 
