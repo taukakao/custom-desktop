@@ -1,0 +1,11 @@
+Package: *
+Pin: origin deb.debian.org
+Pin-Priority: -1
+
+Package: mutter
+Pin: origin deb.debian.org
+Pin-Priority: 600
+
+Package: gnome-shell
+Pin: origin deb.debian.org
+Pin-Priority: 600
