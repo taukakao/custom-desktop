@@ -23,6 +23,11 @@ stages:
 
   # Put your custom actions below this comment
 
+  - name: upgrade system
+    type: shell
+    commands:
+    - apt-get update && apt-get upgrade -y
+
   - name: extra-packages
     type: apt
     source:
