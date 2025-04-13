@@ -70,7 +70,7 @@ jobs:
       - name: Get age of current image
         run: |
           TIME_NOW=$(date '+%s')
-          TIME_IMAGE_CREATED=$(date --date=$(skopeo inspect docker://ghcr.io/taukakao/custom-desktop:main | jq -r '.Created') '+%s')
+          TIME_IMAGE_CREATED=$(date --date=$(skopeo inspect docker://ghcr.io/taukakao/custom-desktop:main | jq -r '.Labels."org.opencontainers.image.created"') '+%s')
           echo "IMAGE_AGE_SECONDS=$(($TIME_NOW - $TIME_IMAGE_CREATED))" >> "$GITHUB_ENV"
 
       - name: Upload current digest
