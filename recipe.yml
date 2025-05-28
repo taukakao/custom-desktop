@@ -41,6 +41,12 @@ stages:
     includes:
       - modules/050-firefox.yml
 
+  - name: commands
+    type: shell
+    commands:
+    - chmod +x /usr/share/initramfs-tools/hooks/vanilla-lvm-fix
+    - chmod +x /usr/share/initramfs-tools/scripts/init-premount/vanilla-lvm-fix
+    
   # Put your custom actions above this comment
 
   - name: set-image-name-abroot
