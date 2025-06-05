@@ -35,6 +35,7 @@ stages:
       - syncthing
       - distrobox
       - sudo
+      - btrbk
 
   #- name: modules
   #  type: includes
