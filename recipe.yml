@@ -28,7 +28,7 @@ stages:
     commands:
     - export DEBIAN_FRONTEND=noninteractive
     - apt-get update
-    - apt-get -y dist-upgrade
+    - apt-get -y -o DPkg::Options::="--force-confold" dist-upgrade
 
   - name: extra-packages
     type: apt
