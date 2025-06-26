@@ -26,7 +26,7 @@ stages:
   - name: upgrade system
     type: shell
     commands:
-    - apt-get update && apt-get upgrade -y
+    - apt-get update && apt-get dist-upgrade -y
 
   - name: extra-packages
     type: apt
