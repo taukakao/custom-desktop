@@ -23,12 +23,12 @@ stages:
 
   # Put your custom actions below this comment
 
-  - name: upgrade system
-    type: shell
-    commands:
-    - export DEBIAN_FRONTEND=noninteractive
-    - apt-get update
-    - apt-get -y -o DPkg::Options::="--force-confold" upgrade
+#  - name: upgrade system
+#    type: shell
+#    commands:
+#    - export DEBIAN_FRONTEND=noninteractive
+#    - apt-get update
+#    - apt-get -y -o DPkg::Options::="--force-confold" upgrade
 
   - name: extra-packages
     type: apt
