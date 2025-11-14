@@ -1,6 +1,7 @@
 name: wifi-dongle
 type: shell
 commands:
+- apt-get install -y git
 - git clone https://github.com/taukakao/aic8800.git
 - cd aic8800
 - sudo cp -r src /usr/src/aic8800-1.0.6
