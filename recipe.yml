@@ -39,11 +39,6 @@ stages:
       - sudo
       - btrbk
 
-  #- name: modules
-  #  type: includes
-  #  includes:
-  #    - modules/050-firefox.yml
-
   # Put your custom actions above this comment
 
   - name: set-image-name-abroot
