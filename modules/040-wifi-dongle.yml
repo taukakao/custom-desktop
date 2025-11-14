@@ -1,0 +1,11 @@
+name: wifi-dongle
+type: shell
+commands:
+- git clone https://github.com/taukakao/aic8800.git
+- cd aic8800
+- sudo cp -r src /usr/src/aic8800-1.0.6
+- sudo dkms install aic8800/1.0.6 -k $(cat /usr/share/vanilla/kernel-version)
+- git clone https://github.com/taukakao/aic8800D80.git
+- cd aic8800D80
+- sudo mkdir /lib/firmware/aic8800D80
+- sudo cp aic8800D80/* /lib/firmware/aic8800D80/
