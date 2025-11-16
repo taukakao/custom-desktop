@@ -2,15 +2,11 @@ name: wifi-dongle
 type: shell
 commands:
 - apt-get install -y git dkms
-- wget https://github.com/radxa-pkg/aic8800/releases/download/4.0%2Bgit20250410.b99ca8b6-3/aic8800-usb-dkms_4.0+git20250410.b99ca8b6-3_all.deb
-- wget https://github.com/radxa-pkg/aic8800/releases/download/4.0%2Bgit20250410.b99ca8b6-3/aic8800-firmware_4.0+git20250410.b99ca8b6-3_all.deb
-- apt install "./aic8800-usb-dkms_4.0+git20250410.b99ca8b6-3_all.deb"
-- apt install "./aic8800-firmware_4.0+git20250410.b99ca8b6-3_all.deb"
-# - git clone https://github.com/taukakao/aic8800.git
-# - cd aic8800
-# - cp -r src /usr/src/aic8800-1.0.6
-# - dkms install aic8800/1.0.6 -k $(cat /usr/share/vanilla/kernel-version)
-# - git clone https://github.com/taukakao/aic8800D80.git
-# - cd aic8800D80
-# - mkdir /lib/firmware/aic8800D80
-# - cp aic8800D80/* /lib/firmware/aic8800D80/
+- git clone https://github.com/taukakao/aic8800.git
+- cd aic8800
+- cp -r src /usr/src/aic8800-1.0.6
+- dkms install aic8800/1.0.6 -k $(cat /usr/share/vanilla/kernel-version)
+- git clone https://github.com/taukakao/aic8800D80.git
+- cd aic8800D80
+- mkdir /lib/firmware/aic8800D80
+- cp aic8800D80/* /lib/firmware/aic8800D80/
