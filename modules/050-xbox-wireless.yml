@@ -4,6 +4,7 @@ commands:
 - apt-get install -y git dkms cabextract
 - git clone https://github.com/medusalix/xone
 - cd xone
+- sed -i "s/dkms install /dkms install -k $(cat /usr/share/vanilla/kernel-version) /" install.sh
 - ./install.sh --release
 - ./xone-get-firmware.sh --skip-disclaimer
 - cd ..
