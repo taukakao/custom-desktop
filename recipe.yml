@@ -39,10 +39,11 @@ stages:
       - sudo
       - btrbk
 
-  # - name: modules
-  #   type: includes
-  #   includes:
-  #   - modules/040-wifi-dongle.yml
+  - name: modules
+    type: includes
+    includes:
+    # - modules/040-wifi-dongle.yml
+    - modules/050-xbox-wireless.yml
 
   # Put your custom actions above this comment
 

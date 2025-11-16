@@ -1,0 +1,10 @@
+name: xbox-wireless
+type: shell
+commands:
+- apt-get install -y git dkms cabextract
+- git clone https://github.com/medusalix/xone
+- cd xone
+- ./install.sh --release
+- ./xone-get-firmware.sh --skip-disclaimer
+- cd ..
+- rm -r xone
