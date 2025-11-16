@@ -2,7 +2,7 @@ name: Taus custom image
 id: custom-desktop
 stages:
 - id: build
-  base: ghcr.io/vanilla-os/desktop:main
+  base: ghcr.io/vanilla-os/desktop:dev
   singlelayer: false
   labels:
     maintainer: self-maintained # Optionally, Replace this with your name
@@ -39,11 +39,11 @@ stages:
       - sudo
       - btrbk
 
-  - name: modules
-    type: includes
-    includes:
-    - modules/040-wifi-dongle.yml
-    # - modules/050-xbox-wireless.yml
+  # - name: modules
+  #   type: includes
+  #   includes:
+  #   - modules/040-wifi-dongle.yml
+  #   - modules/050-xbox-wireless.yml
 
   # Put your custom actions above this comment
 
