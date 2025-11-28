@@ -4,7 +4,7 @@ commands:
 - apt-get install -y git dkms cabextract make
 - git clone https://github.com/dlundqvist/xone
 - cd xone
-- sed -i 's|^KVERSION := $(shell uname -r)|KVERSION :=  $( shell cat /usr/share/vanilla/kernel-version)|' MAKEFILE
+- sed -i 's|^KVERSION := $(shell uname -r)|KVERSION :=  $( shell cat /usr/share/vanilla/kernel-version)|' Makefile
 - sed -i "s/dkms install /dkms install -k $(cat /usr/share/vanilla/kernel-version) /" install.sh
 - make install
 - cd ..
