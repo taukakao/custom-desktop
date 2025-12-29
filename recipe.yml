@@ -38,6 +38,9 @@ stages:
       - distrobox
       - sudo
       - btrbk
+      - gamescope
+      - openrazer-daemon
+      - podman-compose
 
   - name: modules
     type: includes
