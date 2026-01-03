@@ -23,30 +23,11 @@ stages:
 
   # Put your custom actions below this comment
 
-#  - name: upgrade system
-#    type: shell
-#    commands:
-#    - export DEBIAN_FRONTEND=noninteractive
-#    - apt-get update
-#    - apt-get -y -o DPkg::Options::="--force-confold" upgrade
-
-  - name: extra-packages
-    type: apt
-    source:
-      packages:
-      - syncthing
-      - distrobox
-      - sudo
-      - btrbk
-      - gamescope
-      - openrazer-daemon
-      - podman-compose
-
-  - name: modules
-    type: includes
-    includes:
-    # - modules/040-wifi-dongle.yml
-    - modules/050-xbox-wireless.yml
+  - name: initramfs
+    type: shell
+    commands:
+    - rm /usr/share/initramfs-tools/hooks/vanilla-lvm-fix
+    - rm /usr/share/initramfs-tools/scripts/init-premount/vanilla-lvm-fix
 
   # Put your custom actions above this comment
 
